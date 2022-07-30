@@ -8,7 +8,7 @@ from django.dispatch import receiver
 # Create your models here.
 class User(AbstractUser):
     is_customer=models.BooleanField(default=False)
-    is_admin=models.BooleanField(default=False)
+    is_client=models.BooleanField(default=False)
 
 
 
