@@ -23,8 +23,8 @@ def create_auth_token(sender, instance=None,created=False, **kwargs):
 
 class Customer(models.Model):
     user=models.OneToOneField(User,related_name="customer",on_delete=models.CASCADE)
-    email=models.CharField(max_length=120)
-    phone=models.CharField(max_length=120)
+    email=models.CharField(max_length=120, blank=True,null=True)
+    phone=models.CharField(max_length=120,blank=True,null=True)
 
 
     def __str__(self):
@@ -34,8 +34,8 @@ class Customer(models.Model):
 
 class Client(models.Model):
     user=models.OneToOneField(User,related_name="client",on_delete=models.CASCADE)
-    email=models.CharField(max_length=120)
-    phone=models.CharField(max_length=120)
+    email=models.CharField(max_length=120,blank=True,null=True)
+    phone=models.CharField(max_length=120, blank=True,null=True)
 
 
     def __str__(self):
